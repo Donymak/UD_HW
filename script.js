@@ -22,3 +22,24 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
+' use strict';
+
+let numberOfFilms = prompt("Сколько фильмов вы посмотрели?", "2"),
+    a1 = prompt('Один из последних просмотренных фильмов' ),
+    a11 = prompt('На сколько оцените его?'),
+    a2 = prompt('Один из последних просмотренных фильмов'), 
+    a22 = prompt('На сколько оцените его?');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+};
+
+personalMovieDB.movies[a1] = a11;
+personalMovieDB.movies[a2] = a22;
+
+console.log(personalMovieDB);
+
