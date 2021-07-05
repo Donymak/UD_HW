@@ -113,31 +113,52 @@ const personalMovieDB = {
 //     }
 // } 
 
-for (let i=0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов', '' ),
-          a1 = prompt('На сколько оцените его?', ''); 
+// for (let i=0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов', '' ),
+//           a1 = prompt('На сколько оцените его?', ''); 
 
-    if (a && a1 && a.length < 50 && a1.length < 2) {
-        personalMovieDB.movies[a] = a1;
-        console.log("OK");
-    }else {
-        console.log('error');
-        i--;
-    }
-} 
-
-// const a = prompt('Один из последних просмотренных фильмов', '' ),
-//       a1 = prompt('На сколько оцените его?', ''); 
-// let i = 0;
-// while (a != null && a1 != null && a != '' && 
-//       a1 != '' && a.length < 50 && a1.length < 2 && i < 2){
+//     if (a && a1 && a.length < 50 && a1.length < 2) {
 //         personalMovieDB.movies[a] = a1;
 //         console.log("OK");
-//         i++;
-//       } if (a == null && a1 == null && a == '' && 
-//       a1 == '' && a.length > 50 && a1.length > 2) {
+//     }else {
+//         console.log('error');
 //         i--;
-//       }
+//     }
+// } 
+
+
+// let i = 1;
+
+
+// while (i < 3){
+//     const a = prompt('Один из последних просмотренных фильмов', '' ),
+//           a1 = +prompt('На сколько оцените его?', '');    
+//     if (a == '' || a == null || a1 == '' || a1 == null || a.length > 50 || a1.length > 2) {
+        
+//         console.log("There was a mistake");
+//         continue;
+//       } 
+//       personalMovieDB.movies[a] = a1;
+//       console.log('OK');
+//       i++;
+      
+// }
+
+
+let i = 0;
+
+do {
+    const   a = prompt('Один из последних просмотренных фильмов', '' ),
+            a1 = +prompt('На сколько оцените его?', '');    
+    if (a == "" || a == null || a1 == "" || a1 == null || a.length > 50 || a1.length > 2) {
+  
+    console.log("There was a mistake");
+    continue;
+} 
+    personalMovieDB.movies[a] = a1;
+    console.log('OK');
+    i++;
+} while (i < 2);
 
 //       const a = prompt('Один из последних просмотренных фильмов', '' ),
 //       a1 = prompt('На сколько оцените его?', ''); 
