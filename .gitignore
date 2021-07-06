@@ -1,2 +1,4 @@
 .jshintrc
 package-lock.json
+functionsmethods.jshintrc
+test.js 
